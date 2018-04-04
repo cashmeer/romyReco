@@ -1,0 +1,438 @@
+@import 'font.css';
+
+$blue: #00ceff;
+
+body {
+	background-color: #fafafa;
+	font-family: 'Montserrat', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
+
+@mixin flwi() {
+	float: left;
+	width: 100%;
+}
+
+
+@mixin shadow() {
+	box-shadow: 0px 1px 2px 0px rgba(98, 98, 98, 0.05);
+}
+
+.nop {
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+.wrapper {
+	@include flwi();
+	padding: 100px 0;
+	.container {
+		.lefty {
+			background-color: #FFF;
+			height: 400px;
+			@include shadow();
+			border-radius: 3px;
+			float: left;
+			width: 23.5%;
+			border: 1px solid rgba(#ebebeb, .7);
+			.profile {
+				@include flwi();
+				padding: 15px;
+				.profile_picture {
+					float: left;
+					width: 40px;
+					height: 40px;
+					background-size: cover;
+					border-radius: 100%;
+				}
+
+				.profile_infos {
+					float: left;
+					width: calc(100% - 40px);
+					padding: 2px 0 0 15px;
+					.name {
+						@include flwi();
+						font-size: 0.9em;
+						font-weight: 600;
+						color: #444;
+					}
+					.position {
+						@include flwi();
+						font-size: 0.7em;
+						font-weight: 500;
+						color: #868686;
+					}
+				}
+			}
+
+			.menu {
+				@include flwi();
+				padding-top: 10px;
+				border-bottom: 1px solid rgba(#ebebeb, .5);
+				li {
+					&.selected, &:hover {
+						a {
+							background-color: #fafeff;
+							border-color: $blue;
+							i, span {
+								color: $blue;
+							}
+						}
+					}
+					@include flwi();
+					a {
+						@include flwi();
+						padding: 6px 15px;
+						border-left: 2px solid transparent;
+						i {
+							float: left;
+							font-size: 14px;
+							color: #868686;
+							padding-right: 10px;
+						}
+
+						span {
+							float: left;
+							font-size: 0.75em;
+							font-weight: 500;
+							color: #868686;
+							padding-top: 1px;
+						}
+					}
+
+				}
+			}
+
+		}
+
+		.righty {
+			
+			.overview-reco {
+				@include flwi();
+				border-radius: 3px;
+				@include shadow();
+				background-color: #FFF;
+				height: 100px;
+				border: 1px solid rgba(#ebebeb, .7);
+				padding: 17px 0px;
+
+				.item-reco {
+					position: relative;
+					
+					&:after {
+						display: block;
+						position:absolute;
+
+						content:" ";
+
+						width: 0;
+						height: 100%;
+
+						border-right: 1px solid rgba(#ebebeb, .7);
+						top: 15px;
+						right: 0px;
+					}
+
+					&:last-child {
+						&:after {
+							border: none;
+						}
+					}
+
+					height: 40px;
+					padding: 0 0 0 15px;
+
+					.icon-over {
+						width: 65px;
+						height: 65px;
+						float: left;
+						border-radius: 100%;
+						background-color: #fafeff;
+						border: 1px solid #d0f6ff;
+						text-align: center;
+						i {
+							color: $blue;
+							font-size: 26px;
+							display: block;
+							margin-top: 10px;
+						}
+					}
+
+					.reco-title {
+						float: left;
+						width: calc(100% - 70px);
+						font-size: 0.75em;
+						font-weight: 600;
+						color: #000;
+						padding: 15px 15px 0;
+					}
+
+					.reco-content {
+						float: left;
+						width: calc(100% - 70px);
+						font-size: 0.95em;
+						font-weight: 600;
+						padding: 0 15px;
+						span {
+							color: #868686;
+							font-size: 70%;
+							display: inline-block;
+							padding: 0 5px;
+							font-weight: 500;
+						}
+					}
+
+					.cta-recommend {
+						float: left;
+						background-color: $blue;
+						border-radius: 30px;
+						color: #FFF;
+						text-decoration: none;
+						padding: 12px 17px 12px 15px;
+						margin: 10px 0px 0 25px;
+						i {
+							float: left;
+							font-size: 12px;
+							padding-right: 10px;
+						}
+
+						span {
+							float: left;
+							font-size: 0.65em;
+							font-weight: 600;
+							text-transform: uppercase;
+							padding-top: 1.5px;
+						}
+
+						&:hover {
+							background-color: lighten($blue, 10);
+						}
+					}
+				}
+			}
+
+			.tabs-section {
+				@include flwi();
+				border-radius: 3px;
+				@include shadow();
+				background-color: #FFF;
+				border: 1px solid rgba(#ebebeb, .7);
+				margin-top: 15px;
+				.tabs {
+					border-bottom: 1px solid rgba(#ebebeb, .7);
+					@include flwi();
+					li {
+						float: left;
+						width: 33.33%;
+						padding: 18px 10px;
+						text-align: center;
+						position: relative;
+						
+
+						&:after {
+							display: block;
+							position:absolute;
+
+							content:" ";
+
+							width: 0;
+							height: 20px;
+
+							border-right: 1px solid rgba(#ebebeb, .7);
+							top: 22px;
+							right: 0px;
+						}
+
+						&:last-child {
+							&:after {
+								border: none;
+							}
+						}
+						
+						i {
+							
+							font-size: 12px;
+							color: #989898;
+						}
+
+						span {
+							
+							font-size: 0.75em;
+							font-weight: 600;
+							color: #989898;
+							padding: 1px 5px;
+						}
+
+						cursor: pointer;
+
+						&:hover, &.active {
+							i, span {
+								color: $blue;
+							}
+						}
+					}
+				}
+
+				.content-tab {
+					@include flwi();
+
+					display: none;
+
+					&.main {
+						display: block;
+					}
+	
+					.recommend-form {
+						padding: 20px;
+						@include flwi();
+						.input {
+							@include flwi();
+							label {
+								@include flwi();
+								font-size: 0.85em;
+								color: #444;
+								font-weight: 600;
+								padding: 10px 0;
+							}
+
+							padding-bottom: 15px;
+
+							input, select {
+								float: left;
+								width: 240px;
+								border: 1px solid rgba(#ebebeb, .7);
+								border-radius: 3px;
+								padding: 15px;
+								font-size: 0.8em;
+								font-weight: 600;
+								color: #444;
+								outline: 0;
+
+								&:focus {
+									border-color: darken(#ebebeb, 2);
+								}
+							}
+						}
+
+						.input_s {
+							@include flwi();
+							button {
+								float: left;
+								background-color: $blue;
+								border-radius: 30px;
+								color: #FFF;
+								text-decoration: none;
+								padding: 14px 17px 14px 15px;
+								cursor: pointer;
+
+								i {
+									float: left;
+									font-size: 12px;
+									padding-right: 10px;
+								}
+
+								span {
+									float: left;
+									font-size: 0.65em;
+									font-weight: 600;
+									text-transform: uppercase;
+									padding-top: 1.5px;
+								}
+
+								&:hover {
+									background-color: lighten($blue, 10);
+								}
+							}
+						}
+					}
+
+					
+					.recommendations-list {
+						@include flwi();
+						padding: 20px;
+						.reco-item {
+							@include flwi();
+							padding-bottom: 20px;
+							&:last-child {
+								padding-bottom: 0;
+							}
+							.title-section {
+								@include flwi();
+								font-size: 0.75em;
+								font-weight: 600;
+								color: #000;
+								text-transform: uppercase;
+							}
+							.desc-section {
+								@include flwi();
+								font-size: 0.7em;
+								font-weight: 600;
+								color: #868686;
+								padding-top: 2px;
+							}
+
+							.people {
+								@include flwi();
+								padding: 10px 0 0;
+								.person {
+									float: left;
+									width: 35px;
+									height: 35px;
+									background-size: cover;
+									position: relative;
+									margin-right: 5px;
+
+									.tooltip {
+										display:block;
+										position: absolute;
+										right: -30px;
+										bottom: -30px;
+										@include shadow();
+										font-size: 0.65em;
+										font-weight: 600;
+										text-align: center;
+										color: #FFF;
+										padding: 6px 5px;
+										background-color: $blue;
+										visibility: hidden;
+										border-radius: 3px;
+										z-index: 1;
+										transition: 0.2s all;
+										opacity: 0;
+
+										&:before {
+											content: "";
+											display: block;
+											width: 0;
+											height: 0;
+											border: .25rem inset;
+											border-color: transparent transparent $blue;
+											border-bottom-style: solid;
+											top: -8px;
+											position: absolute;
+											left: 20%;
+											-webkit-transform: translateX(-50%) rotate(0deg);
+											transform: translateX(-50%) rotate(0deg);
+										}
+									}
+
+									&:hover {
+										.tooltip {
+											visibility: visible;
+											opacity: 1;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

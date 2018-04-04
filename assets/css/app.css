@@ -1,0 +1,436 @@
+@import url(font.css);
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600");
+body {
+  background-color: #fafafa;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nop {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  float: left;
+  width: 100%;
+  padding: 100px 0;
+}
+
+.wrapper .container .lefty {
+  background-color: #FFF;
+  height: 400px;
+  box-shadow: 0px 1px 2px 0px rgba(98, 98, 98, 0.05);
+  border-radius: 3px;
+  float: left;
+  width: 23.5%;
+  border: 1px solid rgba(235, 235, 235, 0.7);
+}
+
+.wrapper .container .lefty .profile {
+  float: left;
+  width: 100%;
+  padding: 15px;
+}
+
+.wrapper .container .lefty .profile .profile_picture {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  border-radius: 100%;
+}
+
+.wrapper .container .lefty .profile .profile_infos {
+  float: left;
+  width: calc(100% - 40px);
+  padding: 2px 0 0 15px;
+}
+
+.wrapper .container .lefty .profile .profile_infos .name {
+  float: left;
+  width: 100%;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #444;
+}
+
+.wrapper .container .lefty .profile .profile_infos .position {
+  float: left;
+  width: 100%;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: #868686;
+}
+
+.wrapper .container .lefty .menu {
+  float: left;
+  width: 100%;
+  padding-top: 10px;
+  border-bottom: 1px solid rgba(235, 235, 235, 0.5);
+}
+
+.wrapper .container .lefty .menu li {
+  float: left;
+  width: 100%;
+}
+
+.wrapper .container .lefty .menu li.selected a, .wrapper .container .lefty .menu li:hover a {
+  background-color: #fafeff;
+  border-color: #00ceff;
+}
+
+.wrapper .container .lefty .menu li.selected a i, .wrapper .container .lefty .menu li.selected a span, .wrapper .container .lefty .menu li:hover a i, .wrapper .container .lefty .menu li:hover a span {
+  color: #00ceff;
+}
+
+.wrapper .container .lefty .menu li a {
+  float: left;
+  width: 100%;
+  padding: 6px 15px;
+  border-left: 2px solid transparent;
+}
+
+.wrapper .container .lefty .menu li a i {
+  float: left;
+  font-size: 14px;
+  color: #868686;
+  padding-right: 10px;
+}
+
+.wrapper .container .lefty .menu li a span {
+  float: left;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #868686;
+  padding-top: 1px;
+}
+
+.wrapper .container .righty .overview-reco {
+  float: left;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px 0px rgba(98, 98, 98, 0.05);
+  background-color: #FFF;
+  height: 100px;
+  border: 1px solid rgba(235, 235, 235, 0.7);
+  padding: 17px 0px;
+}
+
+.wrapper .container .righty .overview-reco .item-reco {
+  position: relative;
+  height: 40px;
+  padding: 0 0 0 15px;
+}
+
+.wrapper .container .righty .overview-reco .item-reco:after {
+  display: block;
+  position: absolute;
+  content: " ";
+  width: 0;
+  height: 100%;
+  border-right: 1px solid rgba(235, 235, 235, 0.7);
+  top: 15px;
+  right: 0px;
+}
+
+.wrapper .container .righty .overview-reco .item-reco:last-child:after {
+  border: none;
+}
+
+.wrapper .container .righty .overview-reco .item-reco .icon-over {
+  width: 65px;
+  height: 65px;
+  float: left;
+  border-radius: 100%;
+  background-color: #fafeff;
+  border: 1px solid #d0f6ff;
+  text-align: center;
+}
+
+.wrapper .container .righty .overview-reco .item-reco .icon-over i {
+  color: #00ceff;
+  font-size: 26px;
+  display: block;
+  margin-top: 10px;
+}
+
+.wrapper .container .righty .overview-reco .item-reco .reco-title {
+  float: left;
+  width: calc(100% - 70px);
+  font-size: 0.75em;
+  font-weight: 600;
+  color: #000;
+  padding: 15px 15px 0;
+}
+
+.wrapper .container .righty .overview-reco .item-reco .reco-content {
+  float: left;
+  width: calc(100% - 70px);
+  font-size: 0.95em;
+  font-weight: 600;
+  padding: 0 15px;
+}
+
+.wrapper .container .righty .overview-reco .item-reco .reco-content span {
+  color: #868686;
+  font-size: 70%;
+  display: inline-block;
+  padding: 0 5px;
+  font-weight: 500;
+}
+
+.wrapper .container .righty .overview-reco .item-reco .cta-recommend {
+  float: left;
+  background-color: #00ceff;
+  border-radius: 30px;
+  color: #FFF;
+  text-decoration: none;
+  padding: 12px 17px 12px 15px;
+  margin: 10px 0px 0 25px;
+}
+
+.wrapper .container .righty .overview-reco .item-reco .cta-recommend i {
+  float: left;
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+.wrapper .container .righty .overview-reco .item-reco .cta-recommend span {
+  float: left;
+  font-size: 0.65em;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-top: 1.5px;
+}
+
+.wrapper .container .righty .overview-reco .item-reco .cta-recommend:hover {
+  background-color: #33d8ff;
+}
+
+.wrapper .container .righty .tabs-section {
+  float: left;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px 0px rgba(98, 98, 98, 0.05);
+  background-color: #FFF;
+  border: 1px solid rgba(235, 235, 235, 0.7);
+  margin-top: 15px;
+}
+
+.wrapper .container .righty .tabs-section .tabs {
+  border-bottom: 1px solid rgba(235, 235, 235, 0.7);
+  float: left;
+  width: 100%;
+}
+
+.wrapper .container .righty .tabs-section .tabs li {
+  float: left;
+  width: 33.33%;
+  padding: 18px 10px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.wrapper .container .righty .tabs-section .tabs li:after {
+  display: block;
+  position: absolute;
+  content: " ";
+  width: 0;
+  height: 20px;
+  border-right: 1px solid rgba(235, 235, 235, 0.7);
+  top: 22px;
+  right: 0px;
+}
+
+.wrapper .container .righty .tabs-section .tabs li:last-child:after {
+  border: none;
+}
+
+.wrapper .container .righty .tabs-section .tabs li i {
+  font-size: 12px;
+  color: #989898;
+}
+
+.wrapper .container .righty .tabs-section .tabs li span {
+  font-size: 0.75em;
+  font-weight: 600;
+  color: #989898;
+  padding: 1px 5px;
+}
+
+.wrapper .container .righty .tabs-section .tabs li:hover i, .wrapper .container .righty .tabs-section .tabs li:hover span, .wrapper .container .righty .tabs-section .tabs li.active i, .wrapper .container .righty .tabs-section .tabs li.active span {
+  color: #00ceff;
+}
+
+.wrapper .container .righty .tabs-section .content-tab {
+  float: left;
+  width: 100%;
+  display: none;
+}
+
+.wrapper .container .righty .tabs-section .content-tab.main {
+  display: block;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommend-form {
+  padding: 20px;
+  float: left;
+  width: 100%;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommend-form .input {
+  float: left;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommend-form .input label {
+  float: left;
+  width: 100%;
+  font-size: 0.85em;
+  color: #444;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommend-form .input input, .wrapper .container .righty .tabs-section .content-tab .recommend-form .input select {
+  float: left;
+  width: 240px;
+  border: 1px solid rgba(235, 235, 235, 0.7);
+  border-radius: 3px;
+  padding: 15px;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #444;
+  outline: 0;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommend-form .input input:focus, .wrapper .container .righty .tabs-section .content-tab .recommend-form .input select:focus {
+  border-color: #e6e6e6;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommend-form .input_s {
+  float: left;
+  width: 100%;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommend-form .input_s button {
+  float: left;
+  background-color: #00ceff;
+  border-radius: 30px;
+  color: #FFF;
+  text-decoration: none;
+  padding: 14px 17px 14px 15px;
+  cursor: pointer;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommend-form .input_s button i {
+  float: left;
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommend-form .input_s button span {
+  float: left;
+  font-size: 0.65em;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-top: 1.5px;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommend-form .input_s button:hover {
+  background-color: #33d8ff;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommendations-list {
+  float: left;
+  width: 100%;
+  padding: 20px;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommendations-list .reco-item {
+  float: left;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommendations-list .reco-item:last-child {
+  padding-bottom: 0;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommendations-list .reco-item .title-section {
+  float: left;
+  width: 100%;
+  font-size: 0.75em;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommendations-list .reco-item .desc-section {
+  float: left;
+  width: 100%;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #868686;
+  padding-top: 2px;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommendations-list .reco-item .people {
+  float: left;
+  width: 100%;
+  padding: 10px 0 0;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommendations-list .reco-item .people .person {
+  float: left;
+  width: 35px;
+  height: 35px;
+  background-size: cover;
+  position: relative;
+  margin-right: 5px;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommendations-list .reco-item .people .person .tooltip {
+  display: block;
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  box-shadow: 0px 1px 2px 0px rgba(98, 98, 98, 0.05);
+  font-size: 0.65em;
+  font-weight: 600;
+  text-align: center;
+  color: #FFF;
+  padding: 6px 5px;
+  background-color: #00ceff;
+  visibility: hidden;
+  border-radius: 3px;
+  z-index: 1;
+  transition: 0.2s all;
+  opacity: 0;
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommendations-list .reco-item .people .person .tooltip:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: .25rem inset;
+  border-color: transparent transparent #00ceff;
+  border-bottom-style: solid;
+  top: -8px;
+  position: absolute;
+  left: 20%;
+  -webkit-transform: translateX(-50%) rotate(0deg);
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.wrapper .container .righty .tabs-section .content-tab .recommendations-list .reco-item .people .person:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
